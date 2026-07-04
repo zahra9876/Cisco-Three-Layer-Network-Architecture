@@ -93,7 +93,7 @@ Real issues encountered and resolved during the build:
 ## 📂 Files
 - `3-LAYER-ARCH.pkt` — Packet Tracer project file
 - `topology.png` — Network topology diagram
-- `screenshots/` — Connectivity test screenshots
+- `screenshot/` — Connectivity test screenshots
 
 ## 🎯 Skills Demonstrated
 - Three-layer hierarchical network design (Access / Distribution / Core)

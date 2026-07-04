@@ -61,17 +61,17 @@ The network consists of:
 ### Same-VLAN connectivity
 PC-to-PC ping within the same VLAN (HR, VLAN 30) — successful, confirming Access Layer switching works.
 
-![Same VLAN ping](screenshots/ping-same-vlan.png)
+![Same VLAN ping](screenshot/ping-same-vlan.png)
 
 ### Inter-VLAN routing
 Pings across different VLANs (Sales → Finance, HR → IT) succeeded, confirming the Distribution layer correctly routes between VLANs via OSPF.
 
-![Inter-VLAN and gateway ping](screenshots/ping-inter-vlan-and-gateway.png)
+![Inter-VLAN and gateway ping](screenshot/ping-inter-vlan-and-gateway.png)
 
 ### HSRP virtual gateway & both Distribution SVIs reachable
 Pinging the HSRP virtual IP (`192.168.10.254`) and both underlying SVIs (`192.168.10.1` and `.2`) succeeded, confirming HSRP is correctly configured.
 
-![Distribution SVI ping](screenshots/ping-distribution-svi.png)
+![Distribution SVI ping](screenshot/ping-distribution-svi.png)
 
 ### Redundancy / failover test
 With a continuous ping running to a remote VLAN, Distribution Switch 1 (the active HSRP router) was powered off mid-test:
@@ -80,7 +80,7 @@ With a continuous ping running to a remote VLAN, Distribution Switch 1 (the acti
 - All 4 packets were lost during the ~10-second HSRP failover window
 - Ping succeeded again afterward, now routed through Distribution Switch 2 — confirming the redundant design keeps the network operational when a Distribution switch fails
 
-![Redundancy failover ping](screenshots/ping-redundancy-failover.png)
+![Redundancy failover ping](screenshot/ping-redundancy-failover.png)
 
 ## 🛠️ Troubleshooting Notes
 Real issues encountered and resolved during the build:
